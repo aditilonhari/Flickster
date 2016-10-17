@@ -6,15 +6,27 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/ivMovieImage"
+        tools:src="@mipmap/ic_launcher"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_launcher"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:padding="@dimen/surround_padding"
-        android:id="@+id/ivMovieImage"
-        tools:src="@mipmap/ic_launcher"/>
+        android:padding="@dimen/surround_padding" />
+
+    <ImageView
+        android:id="@+id/ivPlayButtonImage"
+        tools:src="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:scaleType="center"
+        android:layout_marginLeft="@dimen/playButtonMarginHorizontal"
+        android:layout_marginTop="@dimen/playButtonMarginVertical"
+        android:background="@color/transparentBackground"
+        android:padding="@dimen/surround_padding" />
 
     <TextView
         android:id="@+id/tvTitle"
