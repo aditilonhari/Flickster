@@ -9,4 +9,22 @@
         <item name="android:background">@color/app_background</item>
     </style>
 
+    <style name="myTitleStyle" parent="@android:style/TextAppearance">
+        <item name="android:padding">@dimen/surround_padding</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">italic|bold</item>
+        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:textSize">@dimen/font_size_title</item>
+    </style>
+
+    <style name="myOverviewStyle" parent="@android:style/TextAppearance">
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">10</item>
+        <item name="android:paddingLeft">@dimen/surround_padding</item>
+        <item name="android:paddingRight">@dimen/surround_padding</item>
+        <item name="android:textColor">@color/overviewColor</item>
+        <item name="android:textSize">@dimen/font_size_overview</item>
+    </style>
+
 </resources>

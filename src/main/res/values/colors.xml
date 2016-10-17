@@ -6,4 +6,7 @@
     <color name="app_background">#212121</color>
     <color name="textcolorPrimary">#CFD8DC</color>
     <color name="textcolorSecondary">#9E9E9E</color>
+    <color name="titleColor">#DAA520</color>
+    <color name="overviewColor">#EEE8AA</color>
+    <color name="transparentBackground">#00000000</color>
 </resources>
