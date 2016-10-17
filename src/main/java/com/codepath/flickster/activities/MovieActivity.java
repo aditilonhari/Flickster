@@ -29,7 +29,6 @@ public class MovieActivity extends AppCompatActivity {
     @BindView(R.id.lvMovies) ListView lvItems;
     @BindView(R.id.swipeContainer) SwipeRefreshLayout swipeContainer;
 
-    //private RequestQueue mRequestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +40,6 @@ public class MovieActivity extends AppCompatActivity {
         movieAdapter = new MovieArrayAdapter(this, movies);
         lvItems.setAdapter(movieAdapter);
 
-        //mRequestQueue = Volley.newRequestQueue(this);
         fetchMovies();
         swipeToRefresh();
 
@@ -90,33 +88,5 @@ public class MovieActivity extends AppCompatActivity {
             }
         });
     }
-
-    /*public void fetchMovies(){
-        // Send the network request to fetch the updated data
-        String url =  "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
-        JsonArrayRequest req = new JsonArrayRequest(url, new Response.Listener<JSONArray>(){
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        movieAdapter.clear();
-                        JSONArray movieJsonResults = null;
-                        try {
-                            movieJsonResults = response.getJSONArray(4);
-                            movies.addAll(Movie.fromJSONArray(movieJsonResults));
-                            movieAdapter.addAll(movies);
-                            movieAdapter.notifyDataSetChanged();
-                            swipeContainer.setRefreshing(false);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                VolleyLog.e("Error: ", error.getMessage());
-            }
-        });
-       /* Add your Requests to the RequestQueue to execute
-        mRequestQueue.add(req);
-    }*/
 }
 
